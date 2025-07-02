@@ -20,7 +20,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img class="img-thumbnail" style="max-height:75px;" src="{{ Vite::asset('resources/images/deportes.jpg') }}"
+            <img class="img-thumbnail" style="max-height:75px;" src="{{ Vite::asset('resources/images/SS.jpg') }}"
                 alt="image">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

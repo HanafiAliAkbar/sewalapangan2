@@ -4,12 +4,11 @@
 @endsection
 @section('content')
     <div class="px-4 py-4 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="{{ Vite::asset('resources/images/deportes.jpg') }}" alt="" width="162"
-            height="126">
-        <h1 class="display-5 fw-bold">Deportes</h1>
+                <img class="d-block mx-auto mb-4" src="{{ Vite::asset('resources/images/SS.jpg') }}" alt="" width="162" height="126">
+            <h1 class="display-5 fw-bold">SPORT SPACE</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Platform terpercaya bagi anda untuk menyewa lapangan yang anda butuhkan! Sebut saja lapangan
-                yang anda butuhkan seperti lapangan futsal, badminton, dan lain - lain semua ada di DEPORTES!</p>
+                yang anda butuhkan seperti lapangan futsal, badminton, dan lain - lain semua ada di SPORT SPACE!</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button type="button" class="btn btn-primary btn-lg px-4 gap-3"><a href="{{ route('sewalapangan') }}"
                         style="text-decoration:none; color:whitesmoke;">Sewa Lapangan
@@ -48,7 +47,7 @@
             </div>
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3">Ingin berolahraga dengan teman atau keluarga ?</h1>
-                <p class="display-6">Booking aja lapangannya di DEPORTES!</p>
+                <p class="display-6">Booking aja lapangannya di SPORT SPACE!</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
                     <button type="button" class="btn btn-primary btn-lg px-4 gap-3"><a href="{{ route('sewalapangan') }}"
                             style="text-decoration:none; color:whitesmoke;">Sewa Lapangan
