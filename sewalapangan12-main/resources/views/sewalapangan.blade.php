@@ -14,8 +14,8 @@
             </div>
             <div class="card-body" style="height: 50%">
                 <h5 class="card-title">{{ $lapangan->nama }}</h5>
-                <p class="card-text"><b>Biaya Sewa Per Jam : Rp. {{ $lapangan->biayasewa }}</b>
-                    <br>{{ $lapangan->deskripsi }}
+<p class="card-text"><b>Biaya Sewa Per Jam : Rp. {{ number_format($lapangan->biayasewa, 0, ',', '.') }}</b></p>
+                    {{ $lapangan->deskripsi }}
                 </p>
                 <a href="{{ route('formsewa', ['lapangan_id' => $lapangan->id]) }}" class="btn btn-primary">PESAN</a>
             </div>
