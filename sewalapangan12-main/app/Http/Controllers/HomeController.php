@@ -48,28 +48,51 @@ class HomeController extends Controller
     }
 
     public function sewastore(Request $request){
-        $messages = [
-            'required' => ': Attribute harus diisi.'
-            ];
-            $validator = Validator::make($request->all(), [
-                'namaPenyewa' => 'required',
-                'tanggal' => 'required',
-                'jamMulai' => 'required',
-                'jamSelesai' => 'required'
-            ], $messages);
-            if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-            }
-            // ELOQUENT
-            $sewa = New Sewa;
-            $sewa->nama_penyewa = $request->namaPenyewa;
-            $sewa->jam_mulai = $request->jamMulai;
-            $sewa->jam_selesai = $request->jamSelesai;
-            $sewa->tanggal = $request->tanggal;
-            $sewa->biayatotal = $request->biayaTotal;
-            $sewa->lapangan_id = $request->lapanganId;
-            $sewa->acc = $request->acc;
-            $sewa->save();
-            return redirect()->route('sewalapangan');
-        }
+    $messages = [
+        'required' => ': Attribute harus diisi.'
+    ];
+    $validator = Validator::make($request->all(), [
+        'namaPenyewa' => 'required',
+        'tanggal' => 'required',
+        'jamMulai' => 'required',
+        'jamSelesai' => 'required'
+    ], $messages);
+
+    if ($validator->fails()) {
+        return redirect()->back()->withErrors($validator)->withInput();
+    }
+
+    // Cek apakah sudah ada sewa di tanggal & jam yang sama (overlap)
+    $cekJadwal = Sewa::where('lapangan_id', $request->lapanganId)
+        ->where('tanggal', $request->tanggal)
+        ->where(function($query) use ($request) {
+            $query->whereBetween('jam_mulai', [$request->jamMulai, $request->jamSelesai])
+                  ->orWhereBetween('jam_selesai', [$request->jamMulai, $request->jamSelesai])
+                  ->orWhere(function($q) use ($request) {
+                      $q->where('jam_mulai', '<=', $request->jamMulai)
+                        ->where('jam_selesai', '>=', $request->jamSelesai);
+                  });
+        })
+        ->exists();
+
+    if ($cekJadwal) {
+        Alert::error('Gagal', 'Maaf, lapangan sudah disewa pada waktu tersebut.');
+        return redirect()->back()->withInput();
+    }
+
+    // Jika aman, simpan
+    $sewa = new Sewa;
+    $sewa->nama_penyewa = $request->namaPenyewa;
+    $sewa->jam_mulai = $request->jamMulai;
+    $sewa->jam_selesai = $request->jamSelesai;
+    $sewa->tanggal = $request->tanggal;
+    $sewa->biayatotal = $request->biayaTotal;
+    $sewa->lapangan_id = $request->lapanganId;
+    $sewa->acc = $request->acc;
+    $sewa->save();
+
+    Alert::success('Berhasil', 'Pemesanan berhasil dibuat.');
+    return redirect()->route('sewalapangan');
+}
+
 }
