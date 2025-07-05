@@ -1,48 +1,52 @@
 {
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "assets/bootstrap-icons-999550fa.woff",
+    "file": "assets/bootstrap-icons-D8ioIzQS.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "assets/bootstrap-icons-cfe45b98.woff2",
+    "file": "assets/bootstrap-icons-Drp84nVS.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/images/SS.jpg": {
-    "file": "assets/SS-256accff.jpg",
+    "file": "assets/SS-CvC3xNBu.jpg",
     "src": "resources/images/SS.jpg"
   },
   "resources/images/deportes.jpg": {
-    "file": "assets/deportes-dc848fa2.jpg",
+    "file": "assets/deportes-DeKYNw4M.jpg",
     "src": "resources/images/deportes.jpg"
   },
   "resources/images/icon1.png": {
-    "file": "assets/icon1-489bffec.png",
+    "file": "assets/icon1-KiTBdvk7.png",
     "src": "resources/images/icon1.png"
   },
   "resources/images/lap1.jpg": {
-    "file": "assets/lap1-6ee6f0ac.jpg",
+    "file": "assets/lap1-CVs5bYLX.jpg",
     "src": "resources/images/lap1.jpg"
   },
   "resources/images/lap2.jpg": {
-    "file": "assets/lap2-e9287875.jpg",
+    "file": "assets/lap2-CPPWEcB1.jpg",
     "src": "resources/images/lap2.jpg"
   },
   "resources/images/lap3.jpg": {
-    "file": "assets/lap3-168ccbfe.jpg",
+    "file": "assets/lap3-CPuAMMb5.jpg",
     "src": "resources/images/lap3.jpg"
   },
   "resources/images/logo.png": {
-    "file": "assets/logo-21748173.png",
+    "file": "assets/logo-DEaWbzv-.png",
     "src": "resources/images/logo.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-c1097373.js",
-    "isEntry": true,
-    "src": "resources/js/app.js"
+    "file": "assets/app-XtP0ej_A.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-93daf664.css",
+    "file": "assets/app-h2cc1O0Z.css",
+    "src": "resources/sass/app.scss",
     "isEntry": true,
-    "src": "resources/sass/app.scss"
+    "names": [
+      "app.css"
+    ]
   }
 }
