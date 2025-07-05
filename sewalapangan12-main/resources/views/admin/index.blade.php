@@ -16,7 +16,7 @@
             </div>
             <div class="card-body" style="height: 50%">
                 <h5 class="card-title">{{ $lapangan->nama }}</h5>
-                <p class="card-text"><b>Biaya Sewa Per Jam : Rp. {{ $lapangan->biayasewa }}</b>
+                <p class="card-text"><b>Biaya Sewa Per Jam : Rp. {{ number_format($lapangan->biayasewa, 0, ',', '.') }}</b></p>
                     <br>{{ $lapangan->deskripsi }}
                 </p>
                 <div class="d-flex gap-3">
