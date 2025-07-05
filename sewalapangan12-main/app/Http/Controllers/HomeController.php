@@ -71,9 +71,5 @@ class HomeController extends Controller
             $sewa->acc = $request->acc;
             $sewa->save();
             return redirect()->route('sewalapangan');
-<<<<<<< HEAD
         }
-=======
-    }
->>>>>>> 254265b14f79764e93e707e8931be897de3d65c5
 }
