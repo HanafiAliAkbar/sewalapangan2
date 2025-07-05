@@ -37,15 +37,26 @@
                             id="jamSelesai" name="jamSelesai" step="3600" value="14:00" min="12:00" max="23:00"
                             onchange="timeFunction()" />
                     </div>
-                    <div class="mb-3" style="">
-                        <label for="biayaTotal" class="form-label">Biaya</label>
-                        <input class="form-control" type="number" id="biayaTotal" name="biayaTotal" value=""
-                            readonly />
-                        <input class="form-control" type="hidden" value="{{ $lapangan->biayasewa }}" id="biayaSewa">
-                        <input class="form-control" type="hidden" value="{{ $lapangan->id }}" id="lapanganId"
-                            name="lapanganId">
-                        <input class="form-control" type="hidden" value="0" id="acc" name="acc">
-                    </div>
+                    <div class="mb-3">
+    <label for="biayaTotal" class="form-label">Biaya</label>
+    <input class="form-control" type="text" id="biayaTotal" name="biayaTotal" value="" readonly />             
+    <input class="form-control" type="hidden" value="{{ $lapangan->biayasewa }}" id="biayaSewa">
+    <input class="form-control" type="hidden" value="{{ $lapangan->id }}" id="lapanganId" name="lapanganId">
+    <input class="form-control" type="hidden" value="0" id="acc" name="acc">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let biaya = document.getElementById('biayaSewa').value;
+    document.getElementById('biayaTotal').value = formatNumber(biaya);
+});
+
+function formatNumber(num) {
+    num = num.toString();
+    return num.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+</script>
+
                     <div class="row">
                         <div class="col-md-6 d-grid">
                             <a href="{{ route('admin.index') }}" class="btn
