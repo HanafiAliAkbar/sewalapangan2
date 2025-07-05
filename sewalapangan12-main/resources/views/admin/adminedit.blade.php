@@ -47,6 +47,17 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
+
+                        <div class="col-md-6 mb-3">
+    <label for="limit_sewa" class="form-label">Limit Sewa per Hari</label>
+    <input class="form-control @error('limit_sewa') is-invalid @enderror" type="number"
+        name="limit_sewa" id="limit_sewa"
+        value="{{ $errors->any() ? old('limit_sewa') : $lapangan->limit_sewa }}"
+        placeholder="Batas sewa per hari">
+    @error('limit_sewa')
+        <div class="text-danger"><small>{{ $message }}</small></div>
+    @enderror
+</div>
                         <div class="col-md-6 mb-3">
                             <label for="urlFoto" class="form-label">URL Foto </label>
                             <input class="form-control @error('urlFoto')

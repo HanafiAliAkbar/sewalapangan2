@@ -3,6 +3,10 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+<<<<<<< HEAD
+=======
+         "postinstall": "npm install",
+>>>>>>> d02a8078dce04e42d6215b44fca4d7766ffbfeaf
         "build": "vite build"
     },
     "devDependencies": {
