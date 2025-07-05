@@ -23,7 +23,7 @@
                         Jam Selesai : {{ $sewa->jam_selesai }}
                         <br>
                         <br>
-                        Total Biaya Sewa : Rp. {{ $sewa->biayatotal }}
+                        Total Biaya Sewa : Rp. {{ number_format($sewa->biayatotal, 0, ',', '.') }}
 
                     </p>
                     <div class="d-flex gap-3">
