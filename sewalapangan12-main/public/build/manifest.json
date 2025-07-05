@@ -7,6 +7,10 @@
     "file": "assets/bootstrap-icons-cfe45b98.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
+  "resources/images/SS.jpg": {
+    "file": "assets/SS-256accff.jpg",
+    "src": "resources/images/SS.jpg"
+  },
   "resources/images/deportes.jpg": {
     "file": "assets/deportes-dc848fa2.jpg",
     "src": "resources/images/deportes.jpg"

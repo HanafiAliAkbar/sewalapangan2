@@ -41,27 +41,31 @@ class AdminController extends Controller
     {
         $messages = [
             'required' => ': Attribute harus diisi.'
-            ];
-            $validator = Validator::make($request->all(), [
-                'nama' => 'required',
-                'alamat' => 'required',
-                'biayaSewa' => 'required',
-                'urlFoto' => 'required',
-                'deskripsi' => 'required'
-            ], $messages);
-            if ($validator->fails()) {
+        ];
+        $validator = Validator::make($request->all(), [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'biayaSewa' => 'required',
+            'limit_sewa' => 'required|integer|min:1', // Tambahkan validasi
+            'urlFoto' => 'required',
+            'deskripsi' => 'required'
+        ], $messages);
+
+        if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
-            }
-            // ELOQUENT
-            $lapangan = New Lapangan;
-            $lapangan->nama = $request->nama;
-            $lapangan->alamat = $request->alamat;
-            $lapangan->biayasewa = $request->biayaSewa;
-            $lapangan->url_foto = $request->urlFoto;
-            $lapangan->deskripsi = $request->deskripsi;
-            $lapangan->save();
-            Alert::success('Berhasil!', 'Sukses menambahkan data lapangan.');
-            return redirect()->route('admin.index');
+        }
+
+        $lapangan = new Lapangan;
+        $lapangan->nama = $request->nama;
+        $lapangan->alamat = $request->alamat;
+        $lapangan->biayasewa = $request->biayaSewa;
+        $lapangan->limit_sewa = $request->limit_sewa; // Tambahkan ini
+        $lapangan->url_foto = $request->urlFoto;
+        $lapangan->deskripsi = $request->deskripsi;
+        $lapangan->save();
+
+        Alert::success('Berhasil!', 'Sukses menambahkan data lapangan.');
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -88,27 +92,31 @@ class AdminController extends Controller
     {
         $messages = [
             'required' => ': Attribute harus diisi.'
-            ];
-            $validator = Validator::make($request->all(), [
-                'nama' => 'required',
-                'alamat' => 'required',
-                'biayaSewa' => 'required',
-                'urlFoto' => 'required',
-                'deskripsi' => 'required'
-            ], $messages);
-            if ($validator->fails()) {
+        ];
+        $validator = Validator::make($request->all(), [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'biayaSewa' => 'required',
+            'limit_sewa' => 'required|integer|min:1', // Tambahkan validasi
+            'urlFoto' => 'required',
+            'deskripsi' => 'required'
+        ], $messages);
+
+        if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
-            }
-            // ELOQUENT
-            $lapangan = Lapangan::find($id);
-            $lapangan->nama = $request->nama;
-            $lapangan->alamat = $request->alamat;
-            $lapangan->biayasewa = $request->biayaSewa;
-            $lapangan->url_foto = $request->urlFoto;
-            $lapangan->deskripsi = $request->deskripsi;
-            $lapangan->save();
-            Alert::success('Berhasil!', 'Berhasil update data lapangan.');
-            return redirect()->route('admin.index');
+        }
+
+        $lapangan = Lapangan::find($id);
+        $lapangan->nama = $request->nama;
+        $lapangan->alamat = $request->alamat;
+        $lapangan->biayasewa = $request->biayaSewa;
+        $lapangan->limit_sewa = $request->limit_sewa; // Tambahkan ini
+        $lapangan->url_foto = $request->urlFoto;
+        $lapangan->deskripsi = $request->deskripsi;
+        $lapangan->save();
+
+        Alert::success('Berhasil!', 'Berhasil update data lapangan.');
+        return redirect()->route('admin.index');
     }
 
     /**
