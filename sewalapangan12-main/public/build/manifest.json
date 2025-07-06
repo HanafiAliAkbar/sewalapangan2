@@ -36,17 +36,14 @@
     "src": "resources/images/logo.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-XtP0ej_A.js",
+    "file": "assets/app-CqN-LK3G.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-h2cc1O0Z.css",
+    "file": "assets/app-D6RAh5va.css",
     "src": "resources/sass/app.scss",
-    "isEntry": true,
-    "names": [
-      "app.css"
-    ]
+    "isEntry": true
   }
 }
