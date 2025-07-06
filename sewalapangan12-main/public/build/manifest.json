@@ -1,10 +1,18 @@
 {
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+<<<<<<< HEAD
+    "file": "assets/bootstrap-icons-BeopsB42.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-mSm7cUeB.woff2",
+=======
     "file": "assets/bootstrap-icons-D8ioIzQS.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
     "file": "assets/bootstrap-icons-Drp84nVS.woff2",
+>>>>>>> d02a8078dce04e42d6215b44fca4d7766ffbfeaf
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/images/SS.jpg": {
@@ -36,13 +44,29 @@
     "src": "resources/images/logo.png"
   },
   "resources/js/app.js": {
+<<<<<<< HEAD
     "file": "assets/app-CqN-LK3G.js",
+=======
+<<<<<<< HEAD
+    "file": "assets/app-BWJj5q_t.js",
+=======
+    "file": "assets/app-XtP0ej_A.js",
+>>>>>>> d02a8078dce04e42d6215b44fca4d7766ffbfeaf
+>>>>>>> c0adc65c30e11b0b1b70f6ccd9b17d6ccaf2b6d0
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/sass/app.scss": {
+<<<<<<< HEAD
     "file": "assets/app-D6RAh5va.css",
+=======
+<<<<<<< HEAD
+    "file": "assets/app-MtNIgQ81.css",
+=======
+    "file": "assets/app-h2cc1O0Z.css",
+>>>>>>> d02a8078dce04e42d6215b44fca4d7766ffbfeaf
+>>>>>>> c0adc65c30e11b0b1b70f6ccd9b17d6ccaf2b6d0
     "src": "resources/sass/app.scss",
     "isEntry": true
   }
