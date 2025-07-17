@@ -86,7 +86,7 @@ class HomeController extends Controller
     $sewa->jam_mulai = $request->jamMulai;
     $sewa->jam_selesai = $request->jamSelesai;
     $sewa->tanggal = $request->tanggal;
-    $sewa->biayatotal = $request->biayaTotal;
+    $sewa->biayatotal = str_replace(',', '', $request->biayaTotal);
     $sewa->lapangan_id = $request->lapanganId;
     $sewa->acc = $request->acc;
     $sewa->save();
